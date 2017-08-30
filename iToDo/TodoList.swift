@@ -19,6 +19,11 @@ class TodoList: NSObject {
     }()
     
     var items: [String] = []
+    var itemsCount: Int {
+        get {
+            return items.count
+        }
+    }
     
     override init() {
         super.init()
@@ -38,6 +43,15 @@ class TodoList: NSObject {
         if let itemsArray = NSArray(contentsOf: fileURL as URL) as? [String] {
             items = itemsArray
         }
+    }
+    
+    func removeItem(index: Int) {
+        guard index < items.count, index >= 0 else {
+            print("Element with index: \(index) doesn't exist.")
+            return
+        }
+        items.remove(at: index)
+        saveItems()
     }
     
     func addItem(item: String) {

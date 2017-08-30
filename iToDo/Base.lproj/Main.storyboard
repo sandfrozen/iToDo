@@ -23,17 +23,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write new thing to do" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EYP-Tu-d9F">
-                                <rect key="frame" x="16" y="28" width="282" height="30"/>
+                                <rect key="frame" x="16" y="49" width="282" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vr2-Fb-cOa">
-                                <rect key="frame" x="16" y="66" width="343" height="581"/>
+                                <rect key="frame" x="16" y="87" width="343" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="HVv-xF-MCR"/>
+                                </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your items" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHH-pA-SeY">
+                                <rect key="frame" x="16" y="20" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vo-Ee-yU9">
-                                <rect key="frame" x="306" y="27" width="53" height="30"/>
+                                <rect key="frame" x="306" y="48" width="53" height="30"/>
                                 <state key="normal" title="⬅️ Add"/>
                                 <connections>
                                     <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKL-T4-kXI"/>
@@ -42,25 +51,29 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="VHH-pA-SeY" secondAttribute="leading" id="1S3-9u-IEy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vr2-Fb-cOa" secondAttribute="bottom" constant="20" id="75M-Kn-bIL"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Vr2-Fb-cOa" secondAttribute="leading" id="C1f-44-4sY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7vo-Ee-yU9" secondAttribute="trailing" id="CTf-jl-06F"/>
+                            <constraint firstItem="EYP-Tu-d9F" firstAttribute="top" secondItem="VHH-pA-SeY" secondAttribute="bottom" constant="8" id="Cdi-6S-adv"/>
+                            <constraint firstItem="VHH-pA-SeY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="R7M-in-PPM"/>
                             <constraint firstAttribute="leadingMargin" secondItem="EYP-Tu-d9F" secondAttribute="leading" id="Xac-e0-VVR"/>
-                            <constraint firstItem="7vo-Ee-yU9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="7" id="YJW-s3-kxq"/>
                             <constraint firstItem="7vo-Ee-yU9" firstAttribute="leading" secondItem="EYP-Tu-d9F" secondAttribute="trailing" constant="8" id="hKk-6f-2wC"/>
                             <constraint firstItem="Vr2-Fb-cOa" firstAttribute="top" secondItem="EYP-Tu-d9F" secondAttribute="bottom" constant="8" id="iKr-Lt-9oU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vr2-Fb-cOa" secondAttribute="trailing" id="jUB-Z1-LPC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VHH-pA-SeY" secondAttribute="trailing" id="shq-se-U6d"/>
                             <constraint firstItem="EYP-Tu-d9F" firstAttribute="baseline" secondItem="7vo-Ee-yU9" secondAttribute="baseline" id="z5A-NT-5IL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="itemTextField" destination="EYP-Tu-d9F" id="kKf-LF-CnJ"/>
+                        <outlet property="itemsInfoLabel" destination="VHH-pA-SeY" id="JAS-3p-rxV"/>
                         <outlet property="tableView" destination="Vr2-Fb-cOa" id="bR1-XA-YVJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="132" y="111.0944527736132"/>
         </scene>
     </scenes>
 </document>
