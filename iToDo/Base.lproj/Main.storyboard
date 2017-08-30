@@ -35,6 +35,9 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vo-Ee-yU9">
                                 <rect key="frame" x="302" y="27" width="57" height="30"/>
                                 <state key="normal" title="Add this"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKL-T4-kXI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,6 +53,10 @@
                             <constraint firstItem="EYP-Tu-d9F" firstAttribute="baseline" secondItem="7vo-Ee-yU9" secondAttribute="baseline" id="z5A-NT-5IL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemTextField" destination="EYP-Tu-d9F" id="kKf-LF-CnJ"/>
+                        <outlet property="tableView" destination="Vr2-Fb-cOa" id="bR1-XA-YVJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
