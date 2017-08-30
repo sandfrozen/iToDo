@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: todoList.cellIdentifier)
         tableView.dataSource = todoList
     }
 
@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         guard let text = itemTextField.text, !text.isEmpty else {
             return
         }
+        itemTextField.text = ""
         todoList.addItem(item: text)
         tableView.reloadData()
     }

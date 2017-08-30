@@ -10,6 +10,8 @@ import UIKit
 
 class TodoList: NSObject {
     
+    let cellIdentifier = "Cell"
+    
     private let fileURL: NSURL = {
         let documentDirectoryURLs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentDirectoryURL = documentDirectoryURLs.first!
@@ -51,7 +53,7 @@ extension TodoList: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         let item = items[indexPath.row]
         
         cell.textLabel!.text = item
