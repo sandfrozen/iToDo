@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E97115911F5995D900F1ACE9 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97115901F5995D900F1ACE9 /* List.swift */; };
+		E97115931F5996FE00F1ACE9 /* TodoLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97115921F5996FE00F1ACE9 /* TodoLists.swift */; };
 		E97A82121F55E0E500C1FD2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A82111F55E0E500C1FD2E /* AppDelegate.swift */; };
 		E97A82141F55E0E500C1FD2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A82131F55E0E500C1FD2E /* ViewController.swift */; };
 		E97A82171F55E0E600C1FD2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97A82151F55E0E600C1FD2E /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E97115901F5995D900F1ACE9 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		E97115921F5996FE00F1ACE9 /* TodoLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoLists.swift; sourceTree = "<group>"; };
 		E97A820E1F55E0E500C1FD2E /* iToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97A82111F55E0E500C1FD2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E97A82131F55E0E500C1FD2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				E97A82111F55E0E500C1FD2E /* AppDelegate.swift */,
+				E97115901F5995D900F1ACE9 /* List.swift */,
 				E97A82131F55E0E500C1FD2E /* ViewController.swift */,
+				E97115921F5996FE00F1ACE9 /* TodoLists.swift */,
 				E9BCF8EF1F56B11700E14980 /* TodoList.swift */,
 				E97A82151F55E0E600C1FD2E /* Main.storyboard */,
 				E97A82181F55E0E600C1FD2E /* Assets.xcassets */,
@@ -141,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9BCF8F01F56B11700E14980 /* TodoList.swift in Sources */,
+				E97115911F5995D900F1ACE9 /* List.swift in Sources */,
+				E97115931F5996FE00F1ACE9 /* TodoLists.swift in Sources */,
 				E97A82141F55E0E500C1FD2E /* ViewController.swift in Sources */,
 				E97A82121F55E0E500C1FD2E /* AppDelegate.swift in Sources */,
 			);
